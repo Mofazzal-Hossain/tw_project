@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel=" stylesheet " href="css/style.css ">
+    <title>Simple project with tailwind css</title>
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- header -->
+    <header class="text-white body-font bg-secondary sticky top-0 z-50 ">
+        <div class="container mx-auto flex flex-wrap justify-between px-15 md:px-0">
+            <a class="flex title-font font-medium items-center text-gray-900  py-2" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg " fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full " viewBox="0 0 24 24 ">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5 "></path>
+                </svg>
+                <span class="ml-3 sm:text-xl text-base text-white ">MANEK BONIK</span>
+            </a>
+            <!-- desktop menu view -->
+            <div class="desktop-menu-view md:mr-auto md:ml-4 md:pl-4 md:border-l md:border-gray-400 md:flex flex-wrap text-base justify-center hidden ">
+                <nav class="flex">
+                    <a class="mr-2 px-3 py-2 flex items-center hover:bg-hoverBackground " href="index.html">Home</a>
+                    <a class="mr-2 px-3 py-2 flex items-center hover:bg-hoverBackground " href="# ">About</a>
+                    <a class="mr-2 px-3 py-2 flex items-center hover:bg-hoverBackground " href="# ">Tean</a>
+                    <a class="mr-2 px-3 py-2 flex items-center hover:bg-hoverBackground " href="# ">Contact</a>
+                </nav>
+            </div>
+            <!-- mobile menu view -->
+            <div class="mobile-menu-view px-3 md:hidden">
+                <div class="menu-icon flex items-center justify-center h-full text-xl select-none" id="menuBtn">
+                    <a href="#"><i class="fas fa-bars"></i></a>
+                </div>
+                <nav class="w-full hidden absolute top-12 left-0 bg-black text-base px-3 py-2" id="menuShow">
+                    <a class="mr-2 px-3 py-2 flex items-center hover:bg-hoverBackground" href="index.html">Home</a>
+                    <a class="mr-2 px-3 py-2 flex items-center hover:bg-hoverBackground" href="# ">About</a>
+                    <a class="mr-2 px-3 py-2 flex items-center hover:bg-hoverBackground" href="# ">Tean</a>
+                    <a class="mr-2 px-3 py-2 flex items-center hover:bg-hoverBackground" href="# ">Contact</a>
+                </nav>
+            </div>
+            <div class="flex items-center social-links">
+                <a class="inline-block bg-white text-black text-center w-6 h-6 ml-3 rounded-full " href="# "><i class="fab fa-facebook-f "></i></a>
+                <a class="inline-block bg-white text-black text-center w-6 h-6 ml-3 rounded-full " href="# "><i class="fab fa-twitter "></i></a>
+                <a class="inline-block bg-white text-black text-center w-6 h-6 ml-3 rounded-full " href="# "><i class="fab fa-google "></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- breadcrumb  -->
+    <div class="breadcrumb-wrap py-3 border-b border-gray-300 px-2">
+        <div class="container mx-auto">
+            <ul class="flex gap-1 text-sm text-gray-500">
+                <li class="hover:text-gray-900">
+                    <a href="#">HOME</a>
+                    <span>/</span>
+                </li>
+                <li class="hover:text-gray-900">
+                    <a href="#">PAINTING GALLERY</a>
+                    <span>/</span>
+                </li>
+                <li class="hover:text-gray-900">
+                    <a href="" class="disabled">ART PAINT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- category -->
+    <div class="category-wrap md:pb-100 pb-15">
+        <div class="container mx-auto">
+            <div class="category-content md:flex block justify-between gap-1">
+                <div class="sidenav md:w-1/5 w-full text-center border-1 border-gray-200 md:block hidden p-15 md:p-0">
+                    <ul class="border border-gray-300">
+                        <li class="border-b border-gray-400 ">
+                            <a href="#" class="py-1 bg-gray-200 hover:bg-gray-300 block">Item 1</a>
+                        </li>
+                        <li class="border-b border-gray-400">
+                            <a href="#" class="py-1 bg-gray-200 hover:bg-gray-300 block">Item 1</a>
+                        </li>
+                        <li class="border-b border-gray-400">
+                            <a href="#" class="py-1 bg-gray-200 hover:bg-gray-300 block">Item 1</a>
+                        </li>
+                        <li class="border-0">
+                            <a href="#" class="py-1 bg-gray-200 hover:bg-gray-300 block">Item 1</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- mobile side nav -->
+                <div class="w-full md:hidden p-15">
+                    <div class="w-1/3 sideNav-icon flex items-center h-full text-xl " id="sideNavBtn">
+                        <a href="#">Filter<i class="fas fa-bars pl-2"></i></a>
+                    </div>
+                    <div class="flex flex-col w-3/6 h-full md:w-64 text-gray-700 bg-gray-100 hidden absolute z-10 right-0" id="sideNavMenu">
+                        <nav class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto py-3">
+                            <a class="px-4 py-1 mt-2 text-base focus:outline-none focus:bg-none text-gray-900 block" href="# ">Portfolio</a>
+                            <a class="px-4 py-1 mt-2 text-base focus:outline-none focus:bg-none text-gray-900 block" href="# ">Portfolio</a>
+                            <a class="px-4 py-1 mt-2 text-base focus:outline-none focus:bg-none text-gray-900 block" href="# ">Portfolio</a>
+                            <a class="px-4 py-1 mt-2 text-base focus:outline-none focus:bg-none text-gray-900 block" href="# ">Portfolio</a>
+                            <a class="px-4 py-1 mt-2 text-base focus:outline-none focus:bg-none text-gray-900 block" href="# ">Portfolio</a>
+                            <a class="px-4 py-1 mt-2 text-base focus:outline-none focus:bg-none text-gray-900 block" href="# ">Portfolio</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="category-product-details md:pl-6 pl-0 ">
+                    <div class="flex flex-col ">
+                        <div class="flex md:items-end items-start px-15 md:px-0 ">
+                            <button class="relative flex justify-between items-center w-48 md:right-0 md:ml-auto ">
+                                <div class="inline-block ">sortBy :</div>
+                                <div class="flex justify-between items-center w-32 h-10" id="sortBy">
+                                    <span class="font-medium ">
+                                        Name
+                                    </span>
+                                    <svg class="w-4 h-4 " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 20 20 " fill="currentColor ">
+                                        <path fill-rule="evenodd " d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z " clip-rule="evenodd " />
+                                    </svg>
+                                </div>
+                                <div class="absolute z-10 top-8 items-start hidden w-full pb-1 bg-white shadow-lg rounded" id="sortList">
+                                    <a class="w-full px-4 block py-1 text-left hover:bg-gray-200" href="# ">Popular</a>
+                                    <a class="w-full px-4 block py-1 text-left hover:bg-gray-200" href="# ">Featured</a>
+                                    <a class="w-full px-4 block py-1 text-left hover:bg-gray-200" href="# ">Newest</a>
+                                    <a class="w-full px-4 block py-1 text-left hover:bg-gray-200" href="# ">Lowest Price</a>
+                                    <a class="w-full px-4 block py-1 text-left hover:bg-gray-200" href="# ">Highest Price</a>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="md:flex md:flex-wrap md:-m-4 ">
+                            <div class="p-4 md:w-1/3 ">
+                                <div class=" border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden ">
+                                    <img class="lg:h-48 md:h-36 w-full object-cover object-center " src="images/banner-2.jpg " alt="blog ">
+                                    <div class="p-2 pb-3 text-center ">
+                                        <h1 class="title-font text-lg font-medium text-gray-900 mb-1 ">Price: <span>15,500 TK</span></h1>
+                                        <button class="bg-primary py-1 px-5 text-sm rounded text-gray-900 ">ORDER NOW</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 md:w-1/3 ">
+                                <div class=" border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden ">
+                                    <img class="lg:h-48 md:h-36 w-full object-cover object-center " src="images/banner-2.jpg " alt="blog ">
+                                    <div class="p-2 pb-3 text-center ">
+                                        <h1 class="title-font text-lg font-medium text-gray-900 mb-1 ">Price: <span>15,500 TK</span></h1>
+                                        <button class="bg-primary py-1 px-5 text-sm rounded text-gray-900 ">ORDER NOW</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 md:w-1/3 ">
+                                <div class=" border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden ">
+                                    <img class="lg:h-48 md:h-36 w-full object-cover object-center " src="images/banner-2.jpg " alt="blog ">
+                                    <div class="p-2 pb-3 text-center ">
+                                        <h1 class="title-font text-lg font-medium text-gray-900 mb-1 ">Price: <span>15,500 TK</span></h1>
+                                        <button class="bg-primary py-1 px-5 text-sm rounded text-gray-900 ">ORDER NOW</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 md:w-1/3 ">
+                                <div class=" border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden ">
+                                    <img class="lg:h-48 md:h-36 w-full object-cover object-center " src="images/banner-2.jpg " alt="blog ">
+                                    <div class="p-2 pb-3 text-center ">
+                                        <h1 class="title-font text-lg font-medium text-gray-900 mb-1 ">Price: <span>15,500 TK</span></h1>
+                                        <button class="bg-primary py-1 px-5 text-sm rounded text-gray-900 ">ORDER NOW</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end mt-10 space-x-1 ">
+                            <button class="flex items-center justify-center h-8 w-8 rounded text-sm font-medium text-indigo-600 " disabled>
+                                1
+                            </button>
+                            <button class="flex items-center justify-center h-8 w-8 rounded hover:bg-indigo-200 text-sm font-medium text-gray-600 hover:text-indigo-600 ">
+                                2
+                            </button>
+                            <button class="flex items-center justify-center h-8 w-8 rounded hover:bg-indigo-200 text-sm font-medium text-gray-600 hover:text-indigo-600 ">
+                                3
+                            </button>
+                            <button class="flex items-center justify-center h-8 w-8 rounded hover:bg-indigo-200 text-gray-600 hover:text-indigo-600 ">
+                                <svg class="h-5 w-5 " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 20 20 " fill="currentColor ">
+                                  <path fill-rule="evenodd " d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z " clip-rule="evenodd " />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer-wrap relative bg-no-repeat bg-cover md:py-100 py-60 h-1/3 w-full bg-center " style="background-image: url(../public/images/banner-2.jpg); ">
+        <div class="overlay bg-black absolute w-full h-full opacity-50 z-1 top-0 left-0 "></div>
+        <div class="container mx-auto ">
+            <div class="footer-content w-full text-white z-10 md:relative sticky top-0 w-full left-4 pl-15 md:pl-0 overflow-hidden ">
+                <div class="md:flex ">
+                    <div class="footer-left md:w-1/3 w-full ">
+                        <h2 class="text-2xl font-bold pb-2 ">MANEK BONIK</h2>
+                        <p class="text-base ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus suscipit error repudiandae deserunt, harum molestiae laboriosam natus placeat quod dolore?</p>
+                    </div>
+                    <div class="footer-right mt-4 md:mt-20 sm:w-6/12 sm:text-right ">
+                        <div class="block mt-2 ">
+                            <i class="fas fa-map-marker-alt inline-block "></i>
+                            <div class="inline-block pl-2 ">Lorem ipsum dolor sit.</div>
+                        </div>
+                        <div class="block mt-2 ">
+                            <i class="fas fa-map-marker-alt inline-block "></i>
+                            <div class="inline-block pl-2 ">Lorem ipsum dolor sit.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom flex items-center md:pt-60 mt-15 ">
+                    <div class="text-white text-sm ">copyrights @ mofazzal Hossain</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../public/js/jquery-1.12.4.min.js "></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js "></script>
+    <script src="../public/js/custom.js "></script>
+</body>
+
+</html>
